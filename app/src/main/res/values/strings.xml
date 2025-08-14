@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Kiosk Mode</string>
+    <string name="not_device_admin">Aplicativo não é administrador do dispositivo</string>
+    <string name="not_device_owner">Aplicativo não é proprietário do dispositivo</string>
+    <string name="device_admin_enabled">Administrador do dispositivo ativado</string>
+    <string name="device_admin_disabled">Administrador do dispositivo desativado</string>
+    <string name="device_admin_warning">Desativar o administrador do dispositivo pode comprometer a segurança do kiosk</string>
+    <string name="kiosk_mode_enabled">Modo kiosk ativado</string>
+    <string name="kiosk_mode_disabled">Modo kiosk desativado</string>
+    <string name="totem_solides_not_found">Aplicativo não encontrado no dispositivo</string>
+    <string name="totem_solides_launched">Aplicativo iniciado com sucesso</string>
+    <string name="kiosk_monitoring_active">Monitoramento do kiosk ativo</string>
+    <string name="kiosk_monitoring_stopped">Monitoramento do kiosk parado</string>
+</resources>
