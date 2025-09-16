@@ -20,7 +20,7 @@ public class KioskService extends Service {
     private static final String CHANNEL_ID = "KioskServiceChannel";
     private static final int NOTIFICATION_ID = 1;
     private static final String TOTEM_SOLIDES_PACKAGE = "com.tangerino.touchless";
-    private static final int CHECK_INTERVAL = 2000; // 2 segundos
+    private static final int CHECK_INTERVAL = 1000; // 2 segundos
 
     private Handler mHandler;
     private Runnable mMonitorRunnable;
