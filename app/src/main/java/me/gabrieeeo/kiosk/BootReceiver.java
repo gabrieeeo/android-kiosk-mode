@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class BootReceiver extends BroadcastReceiver {
 
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
@@ -16,14 +17,10 @@ public class BootReceiver extends BroadcastReceiver {
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    // Iniciar a MainActivity
-                    Intent mainActivityIntent = new Intent(context, MainActivity.class);
-                    mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(mainActivityIntent);
-                    
+
                     Toast.makeText(context, "Kiosk Mode iniciado automaticamente", Toast.LENGTH_SHORT).show();
                 }
-            }, 10000); // 10 segundos de delay
+            }, 60000); // 10 segundos de delay
         }
     }
 }

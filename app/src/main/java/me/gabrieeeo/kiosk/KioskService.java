@@ -145,11 +145,11 @@ public class KioskService extends Service {
         try {
             PackageManager pm = getPackageManager();
             Intent launchIntent = pm.getLaunchIntentForPackage(TOTEM_SOLIDES_PACKAGE);
-            
+
             if (launchIntent != null) {
                 launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(launchIntent);
-                
+
                 // Mostrar toast apenas se o serviço estiver rodando há mais de 5 segundos
                 Handler toastHandler = new Handler(Looper.getMainLooper());
                 toastHandler.postDelayed(new Runnable() {
