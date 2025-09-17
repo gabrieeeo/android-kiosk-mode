@@ -11,4 +11,7 @@
     <string name="totem_solides_launched">Aplicativo iniciado com sucesso</string>
     <string name="kiosk_monitoring_active">Monitoramento do kiosk ativo</string>
     <string name="kiosk_monitoring_stopped">Monitoramento do kiosk parado</string>
+    <string name="password_prompt_title">Senha necessária</string>
+    <string name="password_prompt_message">Digite a senha para continuar</string>
+    <string name="password_incorrect">Senha incorreta</string>
 </resources>

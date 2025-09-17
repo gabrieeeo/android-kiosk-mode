@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
         mButtonToggleKiosk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                enableKioskModeSimple(!mIsKioskEnabled);
+                showPasswordDialogAndToggle();
             }
         });
         
@@ -99,6 +99,25 @@ public class MainActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+    }
+
+    private void showPasswordDialogAndToggle() {
+        final EditText input = new EditText(this);
+        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        new AlertDialog.Builder(this)
+        .setTitle(getString(R.string.password_prompt_title))
+        .setMessage(getString(R.string.password_prompt_message))
+        .setView(input)
+        .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+            String entered = input.getText().toString();
+            if ("1234".equals(entered)) {
+                enableKioskModeSimple(!mIsKioskEnabled);
+            }else {
+                Toast.makeText(MainActivity.this, getString(R.string.password_incorrect), Toast.LENGTH_SHORT).show();
+            }
+        })
+        .setNegativeButton(android.R.string.cancel, null)
+        .show();
     }
 
     private void enableKioskMode(boolean enabled) {
