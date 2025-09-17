@@ -1,6 +1,7 @@
 package me.gabrieeeo.kiosk;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -9,8 +10,10 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -110,7 +113,7 @@ public class MainActivity extends Activity {
         .setView(input)
         .setPositiveButton(android.R.string.ok, (dialog, which) -> {
             String entered = input.getText().toString();
-            if ("1234".equals(entered)) {
+            if ("0102".equals(entered)) {
                 enableKioskModeSimple(!mIsKioskEnabled);
             }else {
                 Toast.makeText(MainActivity.this, getString(R.string.password_incorrect), Toast.LENGTH_SHORT).show();
