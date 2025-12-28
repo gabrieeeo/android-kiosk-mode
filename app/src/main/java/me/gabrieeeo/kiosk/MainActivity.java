@@ -113,7 +113,7 @@ public class MainActivity extends Activity {
         .setView(input)
         .setPositiveButton(android.R.string.ok, (dialog, which) -> {
             String entered = input.getText().toString();
-            if ("0102".equals(entered)) {
+            if ("0000".equals(entered)) {
                 enableKioskModeSimple(!mIsKioskEnabled);
             }else {
                 Toast.makeText(MainActivity.this, getString(R.string.password_incorrect), Toast.LENGTH_SHORT).show();
